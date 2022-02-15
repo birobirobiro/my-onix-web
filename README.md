@@ -1,5 +1,5 @@
 <p align="center">
-<!--   <img alt="my-onix" src=".github/logo.png" width="160px"> -->
+  <img alt="my-onix" src=".github/preview.png">
 </p>
 
 <p align="center">
