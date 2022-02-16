@@ -12,10 +12,14 @@ export const {
 } = createStitches({
   theme: {
     colors: {
-      primary: "#2B2A3C",
-      title: "#FFF",
-      button: "#FFA939",
-      box: "#F1F1F1",
+      gray50: "#EDF3F6",
+      gray100: "#B4B8BD",
+      gray200: "#C4C4C4",
+      gray150: "#747474",
+      gray400: "#444D5B",
+      gray500: "#323A46",
+      gray900: "#131313",
+      button: "#242424",
     },
   },
   media: {
@@ -23,5 +27,9 @@ export const {
   },
   utils: {
     marginX: (value) => ({ marginLeft: value, marginRight: value }),
+
+    marginY: (value) => ({ marginTop: value, marginBottom: value }),
+
+    pa: (value) => ({ padding: value }),
   },
 });
