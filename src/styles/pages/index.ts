@@ -83,12 +83,20 @@ export const Onix = styled("aside", {
 export const textOnix = styled("span", {
   fontSize: pixelToRem(96),
   fontWeight: "600",
-  color: "red",
+  background:
+    "linear-gradient(94.64deg, rgba(220, 211, 211, 0.27) 17.12%, rgba(62, 50, 50, 0.274427) 48.86%, rgba(0, 0, 0, 0.28) 88.82%)",
+  "-webkit-background-clip": "text",
+  "-webkit-text-fill-color": "transparent",
   opacity: 0.6,
   marginTop: pixelToRem(20),
   position: "absolute",
   zIndex: 1,
-  // right: 0,
+  top: 260,
+  right: 412,
+
+  "@bp1": {
+    display: "none",
+  },
 });
 
 export const Input = styled("input", {

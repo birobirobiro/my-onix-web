@@ -64,7 +64,8 @@ export default function Home() {
 
       </S.Container>
 
-      {/* <S.textOnix>CHEVROLET</S.textOnix> */}
+
+      <S.textOnix>CHEVROLET</S.textOnix>
 
       <S.Onix>
         <img src="/images/car.png" alt="Imagem de um carro da chevrolet modelo onix na cor branca" />
