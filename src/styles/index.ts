@@ -23,7 +23,7 @@ export const {
     },
   },
   media: {
-    bp1: "(min-width: 480px)",
+    bp1: "(max-width: 700px)",
   },
   utils: {
     marginX: (value) => ({ marginLeft: value, marginRight: value }),
