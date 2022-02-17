@@ -11,6 +11,7 @@ export const Container = styled("div", {
   flexDirection: "column",
   maxWidth: "78.4375rem",
   backgroundColor: "$gray500",
+  clipPath: "polygon(0 0, 100% 0%, 75% 100%, 0% 100%)",
   padding: "2.9375rem 5.75rem 0",
   minHeight: "100vh",
 });
@@ -49,9 +50,9 @@ export const Content = styled("section", {
 export const Description = styled("div", {
   paddingBottom: "3.4375rem",
   display: "flex",
-  alignItems: "flex-end",
+  alignItems: "center",
   fontFamily: "Poppins, sans-serif",
-  textAlign: "center",
+  textAlign: "left",
   maxWidth: pixelToRem(550),
   marginTop: pixelToRem(112),
 });
@@ -62,14 +63,28 @@ export const LightText = styled("p", {
   fontWeight: "600",
 });
 
-export const DarkText = styled("strong", {
-  color: "$gray900",
-  fontSize: "1.625rem",
-  fontWeight: "600",
-});
-
 export const Form = styled("form", {
   display: "flex",
+});
+
+export const Onix = styled("aside", {
+  position: "absolute",
+  right: 100,
+  top: "35vh",
+  zIndex: 2,
+  display: "flex",
+  flexDirection: "column",
+});
+
+export const textOnix = styled("span", {
+  fontSize: pixelToRem(96),
+  fontWeight: "600",
+  color: "red",
+  opacity: 0.6,
+  marginTop: pixelToRem(20),
+  position: "absolute",
+  zIndex: 1,
+  // right: 0,
 });
 
 export const Input = styled("input", {
@@ -82,10 +97,11 @@ export const Input = styled("input", {
   paddingLeft: pixelToRem(44),
   outline: "none",
   display: "flex",
+  color: "$gray50",
 
   "&::placeholder": {
     color: "$gray50",
-    opacity: 1,
+    opacity: 0.5,
   },
 });
 
@@ -93,7 +109,7 @@ export const Button = styled("button", {
   backgroundColor: "$button",
   border: "none",
   width: pixelToRem(100),
-  height: pixelToRem(43),
+  height: pixelToRem(41),
   borderRadius: "0 5px 5px 0",
   fontFamily: "Poppins, sans-serif",
   fontSize: pixelToRem(13),
@@ -133,10 +149,10 @@ export const TextInfo = styled("p", {
 
 export const Footer = styled("footer", {
   display: "flex",
-  marginTop: "auto",
   justifyContent: "space-between",
   alignItems: "center",
-  paddingBottom: pixelToRem(15),
+  padding: pixelToRem(0, 50),
+  backgroundColor: "$gray500",
 });
 
 export const Designed = styled("a", {
