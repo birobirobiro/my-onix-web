@@ -11,7 +11,7 @@ export const Container = styled("div", {
   flexDirection: "column",
   maxWidth: "78.4375rem",
   backgroundColor: "$gray500",
-  // clipPath: "polygon(0 0, 100% 0%, 75% 100%, 0% 100%)",
+  clipPath: "polygon(0 0, 100% 0%, 75% 100%, 0% 100%)",
   padding: "2.9375rem 5.75rem 0",
   minHeight: "100vh",
 });
