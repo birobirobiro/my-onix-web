@@ -23,7 +23,8 @@ export const {
     },
   },
   media: {
-    bp1: "(max-width: 700px) and (min-width: 400px)",
+    desktopLG: "(max-width: 1600px)",
+    mobileLG: "(max-width: 425px)",
   },
   utils: {
     marginX: (value) => ({ marginLeft: value, marginRight: value }),

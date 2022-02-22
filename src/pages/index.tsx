@@ -3,8 +3,11 @@ import * as S from '../styles/pages'
 import Head from 'next/head'
 import { errorCodes } from '../data/errorCodes'
 import { useState, FormEvent } from "react"
+import useMatchMedia from '../hooks/useMatchMedia'
 
 export default function Home() {
+
+  const matchedWidth = useMatchMedia('max-width: 425px')
 
   const [errorCode, setErrorCode] = useState('')
   const [errorMessage, setErrorMessage] = useState('')
@@ -42,7 +45,14 @@ export default function Home() {
 
             <S.Input maxLength={3} placeholder="Código do erro" type="text" inputMode='numeric' value={errorCode} onChange={event => setErrorCode(event.target.value)} />
 
-            <S.Button>Pesquisar</S.Button>
+            {
+              matchedWidth ? (<S.Button type='button' onClick={() => { setErrorCode('') }}>
+                <img src="/images/close.svg" alt="Close" />
+              </S.Button>) : (<S.Button>
+                Pesquisar
+              </S.Button>)
+            }
+
           </ S.Form>
 
           {errorMessage && (
@@ -73,8 +83,11 @@ export default function Home() {
 
       <S.Footer>
         <S.Designed>
-          <a href="https://github.com/kennedybarros">Design by: Kennedy Barros</a>
+          <a href="https://github.com/birobirobiro">Code: birobirobiro</a>
+
+          <a href="https://github.com/kennedybarros">Design: Kennedy</a>
         </S.Designed>
+
         <S.FooterLogo>
           <S.HeaderImage src="/images/logo.svg" alt="myOnix" />
 

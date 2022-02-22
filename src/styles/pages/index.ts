@@ -1,4 +1,5 @@
-import { styled } from "..";
+import { url } from "inspector";
+import { keyframes, styled } from "..";
 
 function pixelToRem(...values: number[]) {
   return values
@@ -6,14 +7,40 @@ function pixelToRem(...values: number[]) {
     .trim();
 }
 
+const slideCar = keyframes({
+  "0%": {
+    transform: "translateX(100%)",
+  },
+  "100%": {
+    transform: "translateX(0)",
+  },
+});
+
+const slideTextOnix = keyframes({
+  "0%": {
+    transform: "translateY(100%)",
+    opacity: 0,
+  },
+  "100%": {
+    transform: "translateY(0)",
+    opacity: 0.6,
+  },
+});
+
 export const Container = styled("div", {
   display: "flex",
   flexDirection: "column",
-  maxWidth: "78.4375rem",
+  maxWidth: pixelToRem(1255),
   backgroundColor: "$gray500",
   clipPath: "polygon(0 0, 100% 0%, 75% 100%, 0% 100%)",
-  padding: "2.9375rem 5.75rem 0",
+  padding: pixelToRem(47, 92, 0),
   minHeight: "100vh",
+
+  "@mobileLG": {
+    clipPath: "polygon(100% 0, 100% 24%, 86% 100%, 0 100%, 0 0)",
+    padding: pixelToRem(28, 50),
+    background: "linear-gradient(180deg, #2D343E 0%, #1D2127 100%)",
+  },
 });
 
 export const Header = styled("header", {
@@ -26,6 +53,10 @@ export const LogoContainer = styled("div", {
   display: "flex",
   alignItems: "center",
   gap: pixelToRem(10),
+
+  "@mobileLG": {
+    justifyContent: "center",
+  },
 });
 
 export const HeaderImage = styled("img", {
@@ -55,12 +86,22 @@ export const Description = styled("div", {
   textAlign: "left",
   maxWidth: pixelToRem(550),
   marginTop: pixelToRem(112),
+
+  "@mobileLG": {
+    marginTop: pixelToRem(53),
+    textAlign: "center",
+    maxWidth: pixelToRem(315),
+  },
 });
 
 export const LightText = styled("p", {
   color: "$gray50",
   fontSize: "1.625rem",
   fontWeight: "600",
+
+  "@mobileLG": {
+    fontSize: pixelToRem(15),
+  },
 });
 
 export const Form = styled("form", {
@@ -75,9 +116,11 @@ export const Onix = styled("aside", {
   display: "flex",
   flexDirection: "column",
 
-  "@bp1": {
+  "@desktopLG": {
     display: "none",
   },
+
+  animation: `${slideCar} 1s ease-in-out`,
 });
 
 export const textOnix = styled("span", {
@@ -94,9 +137,11 @@ export const textOnix = styled("span", {
   top: 260,
   right: 412,
 
-  "@bp1": {
+  "@desktopLG": {
     display: "none",
   },
+
+  animation: `${slideTextOnix} 1s ease-in-out `,
 });
 
 export const Input = styled("input", {
@@ -115,6 +160,16 @@ export const Input = styled("input", {
     color: "$gray50",
     opacity: 0.5,
   },
+
+  "@mobileLG": {
+    display: "inline-block",
+    width: "100%",
+    height: pixelToRem(40),
+    background:
+      "$gray400 url(images/search-mobile.svg) no-repeat scroll 15px 12px",
+    paddingLeft: pixelToRem(36),
+    borderRight: "0",
+  },
 });
 
 export const Button = styled("button", {
@@ -127,6 +182,18 @@ export const Button = styled("button", {
   fontSize: pixelToRem(13),
   fontWeight: "600",
   color: "$gray50",
+
+  "@mobileLG": {
+    backgroundColor: "$gray400",
+    border: "solid 1px $gray150",
+    borderLeft: "0",
+    height: pixelToRem(40),
+    padding: pixelToRem(15, 10),
+    width: "auto",
+    display: "flex",
+    alignItems: "center",
+    overflow: "hidden",
+  },
 });
 
 export const SearchResult = styled("section", {
@@ -140,6 +207,10 @@ export const SearchResult = styled("section", {
   marginTop: pixelToRem(70),
   pa: pixelToRem(30),
   border: "solid 1px $gray150",
+
+  "@mobileLG": {
+    marginTop: pixelToRem(35),
+  },
 });
 
 export const TextSearchResult = styled("p", {
@@ -153,10 +224,15 @@ export const InfoText = styled("div", {
 });
 
 export const TextInfo = styled("p", {
-  fontSize: pixelToRem(12),
+  fontSize: pixelToRem(13),
   fontFamily: "Roboto, sans-serif",
   color: "$gray100",
   paddingTop: pixelToRem(55),
+
+  "@mobileLG": {
+    paddingTop: pixelToRem(25),
+    color: "$gray150",
+  },
 });
 
 export const Footer = styled("footer", {
@@ -165,10 +241,16 @@ export const Footer = styled("footer", {
   alignItems: "center",
   padding: pixelToRem(0, 50),
   backgroundColor: "$gray500",
+
+  "@mobileLG": {
+    display: "none",
+  },
 });
 
-export const Designed = styled("a", {
+export const Designed = styled("div", {
+  display: "flex",
   color: "$gray200",
+  gap: pixelToRem(10),
 });
 
 export const FooterLogo = styled("div", {
