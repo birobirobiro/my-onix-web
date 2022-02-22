@@ -16,7 +16,7 @@ export default function Home() {
     event.preventDefault()
 
     const result = errorCodes.find(({ error }) => error.code === errorCode)
-    setErrorMessage(result ? result.error.message : 'Código de erro não encontrado')
+    setErrorMessage(result ? result.error.message : `Código de erro ${errorCode} não encontrado`)
   }
 
   return (
