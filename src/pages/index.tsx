@@ -29,6 +29,9 @@ export default function Home() {
     <>
       <Head>
         <title>myOnix</title>
+
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6351626182513576"
+          crossOrigin="anonymous"></script>
       </Head>
 
       <S.Container>
