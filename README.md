@@ -3,11 +3,11 @@
 </p>
 
 <p align="center">
-  <img  src="https://img.shields.io/static/v1?label=license&message=MIT&color=CD9834&labelColor=121214" alt="License">
+  <img  src="https://img.shields.io/static/v1?label=license&message=MIT&color=131313&labelColor=323A46" alt="License">
   
-  <img src="https://img.shields.io/github/forks/birobirobiro/my-onix-web?label=forks&message=MIT&color=CD9834&labelColor=121214" alt="Forks">
+  <img src="https://img.shields.io/github/forks/birobirobiro/my-onix-web?label=forks&message=MIT&color=131313&labelColor=323A46" alt="Forks">
 
-  <img src="https://img.shields.io/github/stars/birobirobiro/my-onix-web?label=stars&message=MIT&color=CD9834&labelColor=121214" alt="Stars">
+  <img src="https://img.shields.io/github/stars/birobirobiro/my-onix-web?label=stars&message=MIT&color=131313&labelColor=323A46" alt="Stars">
 </p>
 
 <h1 align="center">
@@ -26,6 +26,20 @@ This project was developed using the following technologies:
 ## 🚀 Getting started
 
 Clone the project and access the folder.
+
+```bash
+git clone https://github.com/birobirobiro/my-onix-web.git
+
+cd my-onix-web
+```
+
+Run this command to install the dependencies.
+
+```bash
+yarn install
+
+yarn dev
+```
 
 ## 🔖 Layout
 
