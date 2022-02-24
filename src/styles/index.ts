@@ -23,9 +23,10 @@ export const {
     },
   },
   media: {
-    desktopLG: "(max-width: 1600px)",
-    mobileLG: "(max-width: 425px)",
+    desktopLG: "(max-width: 1500px)",
+    mobileLG: "(max-width: 550px)",
   },
+
   utils: {
     marginX: (value) => ({ marginLeft: value, marginRight: value }),
 

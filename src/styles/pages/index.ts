@@ -31,15 +31,20 @@ export const Container = styled("div", {
   display: "flex",
   flexDirection: "column",
   maxWidth: pixelToRem(1255),
-  backgroundColor: "$gray500",
+  background: "linear-gradient(180deg, #2D343E 0%, #1D2127 100%)",
   clipPath: "polygon(0 0, 100% 0%, 75% 100%, 0% 100%)",
   padding: pixelToRem(47, 92, 0),
   minHeight: "100vh",
 
+  "@desktopLG": {
+    alignItems: "center",
+    clipPath: "polygon(0 0, 100% 0, 84% 100%, 0% 100%)",
+  },
+
   "@mobileLG": {
     clipPath: "polygon(100% 0, 100% 24%, 86% 100%, 0 100%, 0 0)",
     padding: pixelToRem(28, 50),
-    background: "linear-gradient(180deg, #2D343E 0%, #1D2127 100%)",
+    alignItems: "center",
   },
 });
 
@@ -47,6 +52,10 @@ export const Header = styled("header", {
   display: "flex",
   gap: "0.625rem",
   flexDirection: "column",
+
+  "@desktopLG": {
+    alignItems: "center",
+  },
 });
 
 export const LogoContainer = styled("div", {
@@ -54,7 +63,7 @@ export const LogoContainer = styled("div", {
   alignItems: "center",
   gap: pixelToRem(10),
 
-  "@mobileLG": {
+  "@desktopLG": {
     justifyContent: "center",
   },
 });
@@ -62,13 +71,22 @@ export const LogoContainer = styled("div", {
 export const HeaderImage = styled("img", {
   width: "3.125rem",
   height: "1rem",
+
+  "@desktopLG": {
+    width: pixelToRem(80),
+    height: pixelToRem(40),
+  },
 });
 
 export const TitleHeader = styled("h1", {
-  fontSize: "1.375rem",
+  fontSize: pixelToRem(22),
   fontWeight: "600",
   color: "$gray50",
   fontStyle: "italic",
+
+  "@desktopLG": {
+    fontSize: pixelToRem(30),
+  },
 });
 
 export const Content = styled("section", {
@@ -76,6 +94,11 @@ export const Content = styled("section", {
   flexDirection: "column",
   maxWidth: pixelToRem(450),
   width: "100%",
+
+  "@desktopLG": {
+    maxWidth: pixelToRem(550),
+    alignItems: "center",
+  },
 });
 
 export const Description = styled("div", {
@@ -87,6 +110,11 @@ export const Description = styled("div", {
   maxWidth: pixelToRem(550),
   marginTop: pixelToRem(112),
 
+  "@desktopLG": {
+    textAlign: "center",
+    maxWidth: pixelToRem(480),
+  },
+
   "@mobileLG": {
     marginTop: pixelToRem(53),
     textAlign: "center",
@@ -96,8 +124,12 @@ export const Description = styled("div", {
 
 export const LightText = styled("p", {
   color: "$gray50",
-  fontSize: "1.625rem",
+  fontSize: pixelToRem(26),
   fontWeight: "600",
+
+  "@desktopLG": {
+    fontSize: pixelToRem(20),
+  },
 
   "@mobileLG": {
     fontSize: pixelToRem(15),
@@ -106,6 +138,16 @@ export const LightText = styled("p", {
 
 export const Form = styled("form", {
   display: "flex",
+
+  "@desktopLG": {
+    flexDirection: "column",
+    alignItems: "center",
+  },
+
+  "@mobileLG": {
+    flexDirection: "row",
+    alignItems: "initial",
+  },
 });
 
 export const Onix = styled("aside", {
@@ -116,11 +158,21 @@ export const Onix = styled("aside", {
   display: "flex",
   flexDirection: "column",
 
+  animation: `${slideCar} 1s ease-in-out`,
+
   "@desktopLG": {
     display: "none",
   },
 
-  animation: `${slideCar} 1s ease-in-out`,
+  "@mobileLG": {
+    top: "53vh",
+    right: 300,
+    width: pixelToRem(100),
+    height: pixelToRem(100),
+    display: "initial",
+
+    animation: `${slideCar} 0.5s ease-in-out`,
+  },
 });
 
 export const textOnix = styled("span", {
@@ -161,6 +213,11 @@ export const Input = styled("input", {
     opacity: 0.5,
   },
 
+  "@desktopLG": {
+    border: "solid 1px $gray150",
+    borderRadius: pixelToRem(5),
+  },
+
   "@mobileLG": {
     display: "inline-block",
     width: "100%",
@@ -169,6 +226,7 @@ export const Input = styled("input", {
       "$gray400 url(images/search-mobile.svg) no-repeat scroll 15px 12px",
     paddingLeft: pixelToRem(36),
     borderRight: "0",
+    borderRadius: "5px 0 0 5px",
   },
 });
 
@@ -183,6 +241,11 @@ export const Button = styled("button", {
   fontWeight: "600",
   color: "$gray50",
 
+  "@desktopLG": {
+    marginTop: pixelToRem(20),
+    width: pixelToRem(350),
+  },
+
   "@mobileLG": {
     backgroundColor: "$gray400",
     border: "solid 1px $gray150",
@@ -193,6 +256,7 @@ export const Button = styled("button", {
     display: "flex",
     alignItems: "center",
     overflow: "hidden",
+    marginTop: 0,
   },
 });
 
@@ -207,6 +271,8 @@ export const SearchResult = styled("section", {
   marginTop: pixelToRem(70),
   pa: pixelToRem(30),
   border: "solid 1px $gray150",
+
+  "@desktopLG": {},
 
   "@mobileLG": {
     marginTop: pixelToRem(35),
@@ -228,6 +294,10 @@ export const TextInfo = styled("p", {
   fontFamily: "Roboto, sans-serif",
   color: "$gray100",
   paddingTop: pixelToRem(55),
+
+  "@desktopLG": {
+    textAlign: "center",
+  },
 
   "@mobileLG": {
     paddingTop: pixelToRem(25),

@@ -2,21 +2,27 @@
 import * as S from '../styles/pages'
 import Head from 'next/head'
 import { errorCodes } from '../data/errorCodes'
-import { useState, FormEvent } from "react"
+import { useState, FormEvent, FocusEventHandler } from "react"
 import useMatchMedia from '../hooks/useMatchMedia'
 
 export default function Home() {
 
-  const matchedWidth = useMatchMedia('max-width: 425px')
+  const matchedWidthMobile = useMatchMedia('max-width: 550px')
 
   const [errorCode, setErrorCode] = useState('')
   const [errorMessage, setErrorMessage] = useState('')
 
-  function handleSearch(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault()
+  function handleSearch(event?: FormEvent<HTMLFormElement>) {
+    event?.preventDefault()
 
     const result = errorCodes.find(({ error }) => error.code === errorCode)
     setErrorMessage(result ? result.error.message : `Código de erro ${errorCode} não encontrado`)
+  }
+
+  function handleBlur() {
+    if (errorCode.length && matchedWidthMobile) {
+      handleSearch()
+    }
   }
 
   return (
@@ -43,10 +49,10 @@ export default function Home() {
         <S.Content>
           <S.Form onSubmit={handleSearch}>
 
-            <S.Input maxLength={3} placeholder="Código do erro" type="text" inputMode='numeric' value={errorCode} onChange={event => setErrorCode(event.target.value)} />
+            <S.Input onBlur={handleBlur} maxLength={3} placeholder="Código do erro" type="text" inputMode='numeric' value={errorCode} onChange={event => setErrorCode(event.target.value)} />
 
             {
-              matchedWidth ? (<S.Button type='button' onClick={() => { setErrorCode('') }}>
+              matchedWidthMobile ? (<S.Button type='button' onClick={() => { setErrorCode('') }}>
                 <img src="/images/close.svg" alt="Close" />
               </S.Button>) : (<S.Button>
                 Pesquisar
