@@ -164,7 +164,7 @@ export const Onix = styled("aside", {
   },
 
   "@mobileLG": {
-    top: "53vh",
+    top: "59vh",
     right: 300,
     width: pixelToRem(100),
     height: pixelToRem(100),
