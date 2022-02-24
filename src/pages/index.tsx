@@ -43,6 +43,10 @@ export default function Home() {
         <meta property="og:title" content="myOnix" />
         <meta property="og:description" content="Saiba o significado do código que aparece no painel do seu Chevrolet." />
         <meta property="og:image" content="https://i.ibb.co/yRjPn1w/OG.png" />
+        <meta property='canonical' content='https://myonix.vercel.app/' />
+        <meta property='author' content='João Inácio (Biro)' />
+        <meta property='keywords' content='chevrolet, onix, painel, código, erro, prisma, mychevrolet, código erro painel, myonix, birobirobiro' />
+        <meta property='robots' content='chevrolet, onix, painel, código, erro, prisma, mychevrolet, código erro painel, myonix, birobirobiro' />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta property="twitter:domain" content="myonix.vercel.app" />
