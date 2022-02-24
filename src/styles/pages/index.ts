@@ -42,7 +42,6 @@ export const Container = styled("div", {
   },
 
   "@mobileLG": {
-    clipPath: "polygon(100% 0, 100% 24%, 86% 100%, 0 100%, 0 0)",
     padding: pixelToRem(28, 50),
     alignItems: "center",
   },
@@ -272,10 +271,14 @@ export const SearchResult = styled("section", {
   pa: pixelToRem(30),
   border: "solid 1px $gray150",
 
-  "@desktopLG": {},
+  "@desktopLG": {
+    width: "100%",
+    maxWidth: pixelToRem(400),
+  },
 
   "@mobileLG": {
     marginTop: pixelToRem(35),
+    maxWidth: pixelToRem(300),
   },
 });
 
