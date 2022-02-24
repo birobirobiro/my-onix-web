@@ -164,13 +164,11 @@ export const Onix = styled("aside", {
   },
 
   "@mobileLG": {
-    top: "59vh",
-    right: 300,
-    width: pixelToRem(100),
-    height: pixelToRem(100),
+    top: 500,
+    right: 500,
     display: "initial",
 
-    animation: `${slideCar} 0.5s ease-in-out`,
+    animation: `${slideCar} 1.5s ease-in-out`,
   },
 });
 
