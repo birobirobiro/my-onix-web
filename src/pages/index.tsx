@@ -2,7 +2,7 @@
 import * as S from '../styles/pages'
 import Head from 'next/head'
 import { errorCodes } from '../data/errorCodes'
-import { useState, FormEvent, FocusEventHandler } from "react"
+import { useState, FormEvent } from "react"
 import useMatchMedia from '../hooks/useMatchMedia'
 
 export default function Home() {
@@ -30,8 +30,30 @@ export default function Home() {
       <Head>
         <title>myOnix</title>
 
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6351626182513576"
-          crossOrigin="anonymous"></script>
+
+
+        <title>myOnix</title>
+
+        {/* Meta Tags */}
+
+        <meta name="description" content="Saiba o significado do código que aparece no painel do seu Chevrolet." />
+
+        <meta property="og:url" content="https://myonix.vercel.app/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="myOnix" />
+        <meta property="og:description" content="Saiba o significado do código que aparece no painel do seu Chevrolet." />
+        <meta property="og:image" content="https://i.ibb.co/yRjPn1w/OG.png" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:domain" content="myonix.vercel.app" />
+        <meta property="twitter:url" content="https://myonix.vercel.app/" />
+        <meta name="twitter:title" content="myOnix" />
+        <meta name="twitter:description" content="Saiba o significado do código que aparece no painel do seu Chevrolet." />
+        <meta name="twitter:image" content="https://i.ibb.co/yRjPn1w/OG.png" />
+
+        {/* Google Analytics */}
+
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6351626182513576" crossOrigin="anonymous"></script>
       </Head>
 
       <S.Container>
