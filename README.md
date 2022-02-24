@@ -43,9 +43,11 @@ yarn dev
 
 ## 🔖 Layout
 
-You can view the project layout through the links below:
+You can view the project through the links below:
 
-- [Layout](#)
+- [Live Preview](https://myonix.vercel.app/)
+
+- [Figma](https://www.figma.com/file/lbP6LDjR1s9g6NbnYnwNdY/myOnix/duplicate)
 
 Remembering that you need to have a [Figma](http://figma.com/) account to access it.
 
