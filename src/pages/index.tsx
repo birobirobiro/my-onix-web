@@ -55,9 +55,6 @@ export default function Home() {
         <meta name="twitter:description" content="Saiba o significado do código que aparece no painel do seu Chevrolet." />
         <meta name="twitter:image" content="https://i.ibb.co/yRjPn1w/OG.png" />
 
-        {/* Google Analytics */}
-
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6351626182513576" crossOrigin="anonymous"></script>
       </Head>
 
       <S.Container>
